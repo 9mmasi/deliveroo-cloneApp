@@ -1,5 +1,5 @@
 
-import { StyleSheet,TextInput, Text,ScrollView, View,Image ,SafeAreaView} from 'react-native';
+import { StyleSheet,TextInput, Text,ScrollView, View,Image ,SafeAreaView, Platform} from 'react-native';
 import {useNavigation} from '@react-navigation/native';
 import React, {useEffect, useLayoutEffect, useState} from 'react';
 import {ChevronDownIcon,UserIcon,AdjustmentsHorizontalIcon, MagnifyingGlassIcon} from "react-native-heroicons/outline"
@@ -65,6 +65,7 @@ const styles = StyleSheet.create({
     flex: 1,
     marginVertical:10,
     backgroundColor: '#fff',
+    paddingTop:Platform.OS==='android'?20:0,
     
   },
   header:{
